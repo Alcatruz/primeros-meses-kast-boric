@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dos arranques</title>
-<meta name="description" content="Los primeros ocho meses del gobierno de Kast en el Congreso, comparados con el mismo tramo del gobierno de Boric.">
+<meta name="description" content="Qué se dijo en la Cámara en los primeros meses de Boric y de Kast, y cómo se relaciona con la manera en que votó cada diputado.">
 <meta name="author" content="Daniel Alcatruz">
 <meta property="og:title" content="Dos arranques">
-<meta property="og:description" content="Los primeros ocho meses del gobierno de Kast en el Congreso, comparados con el mismo tramo del gobierno de Boric.">
+<meta property="og:description" content="Qué se dijo en la Cámara en los primeros meses de Boric y de Kast, y cómo se relaciona con la manera en que votó cada diputado.">
 <meta property="og:type" content="article">
 <style>
 :root {
@@ -24,6 +24,7 @@
   --der: #2a78d6;
   --sen: #eb6834;
   --neutro: #b5b3ab;
+  --rol: #1baf7a;
   --link: #1c5cab;
   --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -43,6 +44,7 @@
     --der: #3987e5;
     --sen: #d95926;
     --neutro: #5d5c57;
+    --rol: #199e70;
     --link: #86b6ef;
   }
 }
@@ -60,6 +62,7 @@
   --der: #3987e5;
   --sen: #d95926;
   --neutro: #5d5c57;
+  --rol: #199e70;
   --link: #86b6ef;
 }
 
@@ -120,6 +123,19 @@ footer { font-family: var(--sans); font-size: 13px; color: var(--muted); padding
   table { font-size: 12.5px; }
   th, td { padding: 7px 6px; }
 }
+blockquote.cita { margin: 0 0 22px; padding: 2px 0 2px 18px; border-left: 3px solid var(--grid); }
+blockquote.cita p { margin: 0 0 6px; font-size: 18px; line-height: 1.55; }
+blockquote.cita .quien { font-family: var(--sans); font-size: 13.5px; color: var(--muted); margin: 0; }
+blockquote.cita mark { background: none; color: var(--ink); font-weight: 700; }
+h3.grupo { font-family: var(--sans); font-size: 15px; color: var(--ink-2); margin: 28px 0 10px; }
+.selector { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; font-family: var(--sans); }
+.selector button { font: inherit; font-size: 13px; color: var(--ink-2); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.selector button[aria-pressed="true"] { color: var(--page); background: var(--ink); border-color: var(--ink); }
+#tabla-clases td, #tabla-clases th, #tabla-polos td, #tabla-polos th { text-align: left; white-space: normal; vertical-align: top; }
+#tabla-clases td { color: var(--ink-2); line-height: 1.5; min-width: 140px; }
+#tabla-polos td { color: var(--ink-2); line-height: 1.5; }
+#tabla-polos td:first-child { white-space: nowrap; color: var(--ink); }
+@media (max-width: 600px) { blockquote.cita p { font-size: 16.5px; } }
 </style>
 </head>
 <body>
@@ -128,23 +144,22 @@ footer { font-family: var(--sans); font-size: 13px; color: var(--muted); padding
 <header class="cabecera col">
   <p class="antetitulo">Comportamiento legislativo · Chile</p>
   <h1>Dos arranques</h1>
-  <p class="bajada">Los primeros ocho meses del gobierno de Kast en el Congreso, comparados con el mismo tramo del gobierno de Boric.</p>
+  <p class="bajada">Qué se dijo en la Cámara en los primeros meses de Boric y de Kast, y cómo se relaciona con la manera en que votó cada diputado.</p>
   <p class="firma"><a href="https://github.com/Alcatruz">Daniel Alcatruz</a> · 27 de noviembre de 2026</p>
 </header>
 
 <article>
 <div class="col">
-  <p>Gabriel Boric y José Antonio Kast asumieron el mismo día del calendario, el 11 de marzo, junto con un Congreso recién elegido. Eso permite comparar sus primeros meses sin correr fechas. Para cada uno tomo las votaciones de proyectos de ley de la Cámara y del Senado entre el 11 de marzo y el 25 de noviembre, el día de la última votación disponible del gobierno de Kast. En los dos casos esa ventana incluye la discusión de su primer presupuesto.</p>
+  <p>Gabriel Boric y José Antonio Kast asumieron el mismo día del calendario, el 11 de marzo, junto con una Cámara recién elegida. Entre un gobierno y el otro los dos grandes bloques cambiaron de lugar. La izquierda, que gobernaba en 2022, quedó en la oposición, y la derecha, que se oponía, llegó al gobierno. Eso permite una pregunta que pocas veces se puede hacer tan limpia. ¿Lo que dice cada bloque en la Sala depende de quién es o del lugar que ocupa?</p>
 
-  <p>La diferencia más visible está justamente ahí. El 14 de noviembre de 2022 la Cámara aprobó en general el presupuesto de 2023, el primero de Boric, por 127 votos contra 0. El 9 de noviembre de 2026 aprobó en general el de 2027, el primero de Kast, por 80 contra 63, con la oposición en contra y el PDG poniendo 9 de los votos a favor. Ese contraste no es una rareza del presupuesto. La Cámara de Kast se divide mucho más seguido que la de Boric, y aun así su gobierno pierde menos.</p>
+  <p>Para responderla comparo los discursos en la Sala de la Cámara entre el 11 de marzo y el 9 de septiembre de 2022 y de 2026, el tramo que Labor Parlamentaria tiene publicado de este año, con 2.945 y 2.892 intervenciones. Después los contrasto con cómo votó cada diputado entre el 11 de marzo y el 25 de noviembre.</p>
 
   <div class="recuadro">
-    <p><b>Cómo se mide.</b> En cada cámara y período estimo B-Call (Toro-Maureira et al., 2025) con las votaciones de proyectos de ley de la ventana. <span class="var">d1</span> es la posición de cada legislador y <span class="var">d2</span> la volatilidad de su voto respecto de su bloque. Oficialismo son los partidos de la coalición de gobierno y oposición, los de las coaliciones que se le oponen. Quienes no están en ninguna, como la DC en 2022 o el PDG en los dos períodos, van aparte. Una votación está dividida cuando la mayoría del oficialismo y la de la oposición votan en sentido contrario.</p>
+    <p><b>Cómo se mide.</b> B-Call (Toro-Maureira et al., 2025) ubica a cada diputado con sus votos en proyectos de ley. <span class="var">d1</span> es su posición y <span class="var">d2</span> la volatilidad de su voto respecto de su bloque. En el texto uso medidas estándar. La keyness compara cuánto usa una palabra un grupo frente a otro con la razón de verosimilitud G², y una palabra separa a los bloques cuando su G² pasa de 10,83, el valor crítico para p &lt; 0,001. Una red de coocurrencias muestra qué palabras aparecen juntas, a menos de cinco palabras de distancia. Un análisis de correspondencias resume en una dimensión cómo se diferencian los diputados por las palabras que usan. El bloque es el lado de la coalición de cada diputado. Quienes no están en ninguna, como la DC en 2022 o el PDG, quedan fuera de las comparaciones entre bloques.</p>
   </div>
 
-  <h2>Dos salas, dos bloques</h2>
-  <p>En los dos períodos B-Call ordena la Cámara en dos bloques que calzan con las coaliciones (Figura 1). En 2022 todos los diputados del oficialismo quedaron en el bloque de la izquierda y todos los de oposición, salvo una diputada, en el de la derecha. En 2026 es al revés y sin excepciones, el oficialismo a la derecha y la oposición a la izquierda.</p>
-  <p>Lo que cambió es el tamaño de cada lado y quién queda al medio. Boric empezó con 68 de los 155 diputados y 19 de los 50 senadores. Kast tiene 76 diputados y 26 senadores, lo que le da mayoría en el Senado pero no en la Cámara, donde le faltan dos votos para la mitad. Ahí deciden los que no pertenecen a ninguna coalición. En 2022 eran 19, entre la DC, el PDG, el PH e independientes, y se repartieron casi por mitades entre los dos bloques, 10 y 9. En 2026 son 14, todos del PDG, y 12 votan con el bloque de la izquierda.</p>
+  <h2>Cómo votaron</h2>
+  <p>Los votos ordenan la Cámara en dos bloques que calzan con las coaliciones en los dos períodos (Figura 1). En 2022 todos los diputados del oficialismo quedaron en el bloque de la izquierda de B-Call y todos los de oposición, salvo una diputada, en el de la derecha. En 2026 es al revés y sin excepciones. Esa es la referencia contra la que mido el texto.</p>
 </div>
 
 <figure class="ancho">
@@ -153,66 +168,73 @@ footer { font-family: var(--sans); font-size: 13px; color: var(--muted); padding
 </figure>
 
 <div class="col">
-  <h2>Una sala más dividida, un gobierno que pierde menos</h2>
-  <p>La Cámara de 2026 se divide bastante más. El 75% de sus votaciones de proyectos de ley enfrentó a oficialismo y oposición, contra el 48% en 2022 (Figura 2). No es solo el presupuesto, que en 2026 tuvo muchas más votaciones. Sin él, las votaciones divididas pasan del 35% al 64%.</p>
-  <p>Pero cuando la sala se divide, el gobierno de Kast gana mucho más seguido. En la Cámara, el oficialismo de Boric ganó el 64% de las votaciones divididas y el de Kast gana el 84%. En el Senado la distancia es parecida, del 52% al 84%, y ahí sí pesan los escaños, porque Kast tiene 26 senadores y Boric tenía 19. En la Cámara los números son más parejos. Sumando a quienes votan con cada bloque, el de la izquierda tenía 79 diputados en 2022 y el de la derecha tiene 78 en 2026. La cohesión tampoco marca la diferencia, porque el oficialismo votó igual de unido en los dos períodos, con un índice de Rice de 0,93 con Boric y 0,92 con Kast. Este análisis no alcanza para decir de dónde sale la distancia. Puede ser la asistencia, el quórum de cada votación o cómo votan en cada caso los diputados de fuera de las coaliciones.</p>
+  <h2>Lo que es del bloque y lo que es del lugar</h2>
+  <p>Si lo que dice un bloque dependiera del lugar que ocupa, sus palabras típicas cambiarían de lado junto con el gobierno. Si dependiera de quién es, se quedarían con él. La Figura 2 ubica cada palabra según cuánto separa a los bloques en 2022 y en 2026. Arriba a la derecha están las que fueron de la izquierda en los dos períodos y abajo a la izquierda, las de la derecha en los dos. En las otras dos esquinas, las que siguieron al gobierno o a la oposición.</p>
+  <p>De las 3.865 palabras que los diputados usan lo suficiente en los dos períodos, 536 separan a los bloques en al menos uno de ellos y 67 en los dos. De esas 67, 52 son del mismo bloque en 2022 y en 2026 (Tabla 1). La derecha habla de La Araucanía y la macrozona sur, del terrorismo, de delincuentes y carabineros, de los chilenos y de la izquierda. La izquierda habla de trabajadoras y trabajadores, de niñas y adolescentes, de derechos, de desigualdad, de salud y de la derecha. Eso no cambió cuando pasaron del gobierno a la oposición o al revés.</p>
+  <p>Las otras 15 cambian de bloque con el gobierno, y casi todas van con la oposición. Son 13 palabras que usa más el bloque que se opone, sea cual sea, entre ellas ministro, gobierno, usted, cuál y cuáles, constitucionalidad e impuestos. Es el vocabulario de quien pregunta y fiscaliza. Del lado del gobierno hay solo 2, respeto y mar. La oposición tiene un léxico propio y el gobierno no.</p>
+  <p>Lo demás sigue a la agenda de cada año. 469 palabras separan a los bloques en un período y no en el otro. Seguridad era de la derecha en 2022 y en 2026 la usan por igual los dos bloques; la reforma tributaria es de la izquierda en 2026 y no separaba a nadie en 2022. Si se ordenan todas las palabras por cuánto más las usa la izquierda que la derecha, el orden de 2022 casi no anticipa el de 2026 (correlación de Spearman de 0,12).</p>
 </div>
 
 <figure class="ancho">
-  <div class="grafico"><div id="fig-divididas" class="lienzo" role="img" aria-label="Porcentaje de votaciones divididas y porcentaje de ellas que ganó el oficialismo, en la Cámara y el Senado, 2022 y 2026"></div></div>
-  <figcaption><b>Figura 2.</b> En el primer panel, el porcentaje de votaciones de proyectos de ley en que la mayoría del oficialismo y la de la oposición votaron en sentido contrario. En el segundo, de esas votaciones, el porcentaje que ganó el oficialismo. En la Cámara el resultado es el oficial y en el Senado, el lado con más votos. Desde 2026 la API del Senado registra muchas más votaciones por sesión (239 votaciones de proyectos en 2022 y 801 en 2026, en 72 sesiones cada vez), así que ahí conviene mirar los porcentajes y no los totales.</figcaption>
+  <div class="grafico"><div id="fig-palabras" class="lienzo" role="img" aria-label="Keyness de cada palabra entre izquierda y derecha en 2022 y en 2026"></div></div>
+  <figcaption><b>Figura 2.</b> Cada punto es una palabra que separa a los bloques en al menos uno de los dos períodos. La posición es su keyness, la raíz cuadrada de G² con signo, positiva cuando la usa más la izquierda. Las líneas punteadas marcan el valor crítico (p &lt; 0,001). En color, las que lo pasan en los dos períodos, con el nombre de las más firmes. Al pasar el cursor aparecen la palabra y cuántas veces se usó en cada período.</figcaption>
 </figure>
-
-<div class="col">
-  <h2>El primer presupuesto</h2>
-  <p>El presupuesto concentra la diferencia (Tabla 1). El de 2027 llevó a la Sala de la Cámara 603 votaciones hasta el 25 de noviembre, más del doble de las 263 del de 2023, y el 86% fueron divididas, contra el 63%. En las dos discusiones el oficialismo perdió más votaciones en el presupuesto que en el resto de los proyectos.</p>
-  <p>En los dos presupuestos, quienes cambiaron de lado eran sobre todo de fuera de las coaliciones. Si se estima B-Call solo con las votaciones del presupuesto, 7 diputados cambian de bloque en 2022, tres del PDG, uno de la DC y tres independientes, y 10 en 2026, nueve del PDG y uno del PSC. Uno aparece en las dos listas, Roberto Arroyo, que en 2022 era del PDG y en 2026 es del PSC, parte del oficialismo. En el presupuesto de Kast votó contra la mayoría de su coalición en el 54% de las votaciones. El oficialista que más se apartó en el presupuesto de Boric, Tomás Lagomarsino, lo hizo en el 17%.</p>
-</div>
 
 <figure class="ancho">
   <div class="tabla-envoltura">
-    <table id="tabla-presupuesto"><thead></thead><tbody></tbody></table>
+    <table id="tabla-clases"><thead></thead><tbody></tbody></table>
   </div>
-  <figcaption><b>Tabla 1.</b> Votaciones del presupuesto en la Sala hasta el 25 de noviembre. El presupuesto de 2023 es el boletín 15383-05 y el de 2027, el 18702-05. Los diputados que cambian de bloque son los que B-Call ubica en el otro bloque cuando se estima solo con las votaciones del presupuesto, sin contar a quienes votaron en menos del 10% de ellas. En el Senado los totales no se comparan entre los dos años, por el cambio en la API (ver la Figura 2).</figcaption>
+  <figcaption><b>Tabla 1.</b> Las palabras que separan a los bloques en 2022 y en 2026 con p &lt; 0,001, ordenadas por el menor de sus dos G². Las expresiones de dos palabras van unidas.</figcaption>
 </figure>
 
 <div class="col">
-  <h2>La agenda del gobierno</h2>
-  <p>Kast llegó con más proyectos propios y los apuró antes (Figura 3). Entre el 11 de marzo y el 25 de noviembre ingresó 60 mensajes, contra 51 de Boric, y presentó 1.451 urgencias, contra 1.240. A fines de junio ya llevaba 473, cuando Boric llevaba 295. La diferencia está en las urgencias de suma, 816 contra 518. Las de discusión inmediata, las más apremiantes, fueron menos con Kast, 205 contra 261.</p>
-  <p>Más urgencias no se tradujeron todavía en más leyes propias. En la ventana se publicaron 17 leyes que venían de mensajes de Kast y 15 de mensajes de Boric. Contando las que venían de gobiernos anteriores, con Boric se publicaron 106 leyes y con Kast 72. Los diputados y senadores, por su parte, presentaron 726 mociones en 2026 y 613 en 2022.</p>
+  <h2>Las palabras en su contexto</h2>
+  <p>Una palabra suelta pierde su uso. Para leerlas en contexto saqué, de la palabra más firme de cada grupo, una cita al azar en cada período, entre los discursos del bloque que más la usa. Las citas no están elegidas a mano.</p>
+  <div id="citas"></div>
+  <p>Con respeto pasa algo distinto. En la cita de 2022 es una fórmula de cortesía dentro de un reclamo reglamentario y en la de 2026, parte de un diagnóstico de desorden. Las dos palabras del gobierno no alcanzan a formar un discurso.</p>
+
+  <p>Una red de coocurrencias muestra con qué se juntan las palabras de cada bloque (Figura 3). Con la derecha en el gobierno, su red gira en torno a votaré a favor y a un Chile que vuelve a crecer y recupera el orden. En la oposición, en 2022, se armaba alrededor de la región de La Araucanía y del Biobío y de las preguntas a la ministra y al ministro, hechas por su intermedio, la fórmula con que un diputado se dirige al Ejecutivo a través de quien preside. En la izquierda opositora de 2026 la unión más frecuente es la reserva de constitucionalidad, y el centro de la red es el gobierno, unido al ministro, al plan, a la derecha, a los recortes y a la megarreforma tributaria. En el gobierno, en 2022, unía a trabajadores y trabajadoras, los derechos con las niñas y con los pueblos indígenas, y la ley de pesca con la palabra corrupta.</p>
 </div>
 
 <figure class="ancho">
-  <div class="grafico"><div id="fig-urgencias" class="lienzo" role="img" aria-label="Urgencias acumuladas por mes de gobierno, Boric 2022 y Kast 2026"></div></div>
-  <figcaption><b>Figura 3.</b> Urgencias que el Ejecutivo presentó desde el 11 de marzo, acumuladas por mes. Marzo cuenta desde el 11 y noviembre hasta el 25.</figcaption>
+  <div class="selector" id="selector-red" role="group" aria-label="Bloque y período de la red"></div>
+  <div class="grafico"><div id="fig-redes" class="lienzo" role="img" aria-label="Red de coocurrencias de las palabras que más distinguen a cada bloque"></div></div>
+  <figcaption><b>Figura 3.</b> Coocurrencias entre las 30 palabras que más distinguen a cada bloque en cada período, a menos de cinco palabras de distancia en sus discursos. Se muestran las 60 uniones más frecuentes y las palabras que unen. El grosor indica cuántas veces aparecen juntas y el tamaño del punto, cuántas veces se usó la palabra. En color, las palabras que son del bloque o de la oposición en los dos períodos.</figcaption>
 </figure>
 
 <div class="col">
-  <h2>Lo que se dice en la Sala</h2>
-  <p>Con los discursos se puede ver si el lugar en el gobierno cambia lo que dice cada bloque. Uso las intervenciones en la Sala de la Cámara entre el 11 de marzo y el 9 de septiembre de cada año, el tramo que Labor Parlamentaria tiene de 2026, con 2.945 discursos en 2022 y 2.892 en 2026. En cada período busqué las palabras que más distinguen al oficialismo de la oposición.</p>
-  <p>Las palabras más típicas de cada bloque se repiten de un período al otro, aunque el bloque haya pasado del gobierno a la oposición o al revés (Tabla 2). La derecha hablaba en 2022 de La Araucanía, del terrorismo, de la izquierda y de los chilenos, y en 2026, desde el gobierno, sigue haciéndolo. La izquierda hablaba de trabajadoras, niñas y derechos desde el gobierno y sigue hablando de eso desde la oposición. De las 50 palabras más típicas de la derecha en 2022, 8 siguen entre las 50 más típicas de la derecha en 2026, y en la izquierda son 9. Solo 3 pasan al bloque contrario, y son palabras de la oposición frente al gobierno, usted, ministro y constitucionalidad, que en 2022 usaba la derecha opositora y en 2026 la izquierda opositora.</p>
-  <p>Fuera de ese núcleo, el vocabulario sigue a la agenda. En 2022 la oposición hablaba de dosis y vacunación, y en 2026 de lo tributario, de los más ricos y de la desigualdad. Si se ordenan las 9.208 palabras que se usan en los dos períodos según cuánto más las usa la izquierda que la derecha, el orden de 2022 casi no anticipa el de 2026 (correlación de Spearman de 0,08). Lo que persiste es el núcleo de cada bloque, no el resto de su léxico.</p>
+  <h2>El texto y el voto</h2>
+  <p>Queda la otra pregunta. ¿Hablan distinto los que votan distinto? Con un análisis de correspondencias de las palabras de cada diputado con al menos 10 intervenciones se obtiene una posición desde el texto, que comparo con <span class="var">d1</span> (Figura 4). La orientación de esa dimensión se fijó por partido, con la UDI y RN del lado positivo y el PS y el PC del negativo, antes de compararla con los votos.</p>
+  <p>En 2022 la posición del texto y la del voto se parecen (correlación de 0,47), también dentro de la derecha (0,37). La dimensión separaba el habla del cuidado y la salud, con el autismo, los tratamientos, los cuidados y la niñez, del habla del conflicto en el sur, con la CAM, Llaitul, La Araucanía, Malleco, los militares, los terroristas y los comunistas (Tabla 2). En 2026 el parecido baja a 0,27 y dentro de la derecha se invierte (−0,12). La dimensión ya no ordena temas sino registros. De un lado queda el habla de la discusión política, con el bencinazo, los superricos, la plata e Irán, y palabras de la conversación como poquito. Del otro, el habla de la gestión, con los comerciantes, las rutas, los trámites y lo operativo y preventivo. La derecha en el gobierno habla más de gestión, y quien confronta queda del otro lado, sea de la oposición o del oficialismo.</p>
+  <p>Los casos que se apartan muestran qué mide el texto. En 2026 Luis Sánchez (Republicanos), que vota cerca del borde de su bloque, queda del lado de la discusión política con Irán, los ayatolas, los regímenes y la izquierda. Francisco Crisóstomo (PS) y Jorge Díaz (DC), que votan con la oposición, quedan del lado de la gestión hablando de Ñuble y Chillán, y de Arica, Parinacota y la frontera. En 2022 Marta Bravo (UDI) quedaba del lado del cuidado, con los deportistas, la hipoacusia y la apicultura. Hablar del distrito o de un tema sectorial aleja a un diputado de su bloque en el texto aunque vote con él.</p>
 </div>
+
+<figure class="ancho">
+  <div class="grafico"><div id="fig-texto" class="lienzo" role="img" aria-label="Posición del voto y posición desde el texto de cada diputado, 2022 y 2026"></div></div>
+  <figcaption><b>Figura 4.</b> Posición del voto (<span class="var">d1</span> de B-Call) y posición desde el texto de cada diputado con al menos 10 intervenciones en la Sala entre el 11 de marzo y el 9 de septiembre. La posición desde el texto es la primera dimensión de un análisis de correspondencias de sus palabras, con la UDI y RN hacia arriba. Al pasar el cursor aparecen el nombre y el partido.</figcaption>
+</figure>
 
 <figure class="ancho">
   <div class="tabla-envoltura">
-    <table id="tabla-palabras"><thead></thead><tbody></tbody></table>
+    <table id="tabla-polos"><thead></thead><tbody></tbody></table>
   </div>
-  <figcaption><b>Tabla 2.</b> Las 12 palabras que más distinguen a cada bloque en los discursos en la Sala de la Cámara entre el 11 de marzo y el 9 de septiembre de cada año, entre las que se usan en los dos períodos. En negrita, las que están también entre las 50 más típicas del mismo bloque en el otro período.</figcaption>
+  <figcaption><b>Tabla 2.</b> Las 12 palabras más alejadas en cada polo de la posición desde el texto, entre las que están en la mitad más usada.</figcaption>
 </figure>
 
 <div class="col">
   <h2>Lo que dice y lo que no</h2>
-  <p>Son ocho meses y medio de cada gobierno, y con dos casos no se puede separar el efecto del gobierno del de la Cámara que le tocó. Lo que sí muestran es que la sala que recibió a Kast está más partida que la que recibió a Boric, y que aun así su gobierno gana más votaciones disputadas. El primer presupuesto, aprobado en general sin votos en contra en 2022, fue en 2026 una votación de bloque contra bloque. Y en la Sala cada bloque sigue hablando de lo suyo, esté en el gobierno o en la oposición.</p>
+  <p>Son seis meses de discursos de cada gobierno y una sola alternancia, así que esto describe y no prueba. En estos datos lo que dice cada bloque depende sobre todo de quién es. El lugar que ocupa le agrega poco, salvo en la oposición, que tiene su propio vocabulario para interpelar al gobierno. Y la relación entre lo que se dice y cómo se vota no es fija. En 2022 la principal diferencia en el habla era de temas y se parecía al voto. En 2026 es de registro, y cruza a los bloques.</p>
 
   <h3>Datos, código y decisiones</h3>
   <ul class="notas">
-    <li>Votaciones de proyectos de ley de la Cámara (datos abiertos de la Cámara) y del Senado (API del Senado), del 11 de marzo al 25 de noviembre de 2022 y de 2026. En la Cámara, las de tipo proyecto de ley con boletín, 563 en 2022 y 1.141 en 2026. En el Senado, las que tienen boletín de proyecto de ley, 239 y 801.</li>
-    <li>B-Call con umbral 0, estimado por separado en cada cámara y período, con un parlamentario de la UDI como pivote para fijar el signo y la polaridad revisada por partidos. La primera dimensión de W-NOMINATE correlaciona entre 0,97 y 0,999 con <span class="var">d1</span>.</li>
+    <li>Discursos de Labor Parlamentaria (BCN), intervenciones en la Sala de la Cámara de diputados en ejercicio, sin las de quien preside, entre el 11 de marzo y el 9 de septiembre, 2.945 en 2022 y 2.892 en 2026. Al 27 de noviembre, Labor no tenía sesiones de la Cámara posteriores al 9 de septiembre de 2026.</li>
+    <li>Limpieza. Se quitan los encabezados de cada turno, los nombres de personas y de partidos y las fórmulas de la Sala, y quedan las palabras de 3 o más letras que no son vacías. Las expresiones de dos palabras frecuentes, como derechos humanos o macrozona sur, se unen en un término, con una lista aprendida antes con los discursos de la Cámara de 2002 a 2022.</li>
+    <li>Keyness con quanteda.textstats, G² y chi², y log-odds con previa informativa de toda la Cámara del período. De las 20 palabras con más peso de cada lado, G² y chi² comparten entre 18 y 19, y G² y log-odds entre 15 y 18. Solo cuentan las palabras usadas al menos 8 veces, en 4 discursos y por 10 diputados del período.</li>
+    <li>Redes con quanteda::fcm, en una ventana de cinco palabras con las vacías como hueco para conservar la distancia del texto, y el algoritmo de Fruchterman y Reingold para ubicar los nodos.</li>
+    <li>Citas. De la palabra de cada grupo con el mayor G² mínimo entre los dos períodos, una aparición al azar, con semilla fija, en los discursos del bloque que la usa más, con 12 palabras a cada lado del texto original.</li>
+    <li>Posición desde el texto. Análisis de correspondencias de la matriz de diputados por palabras, con los diputados que tienen al menos 10 intervenciones y las palabras que aparecen en entre el 0,1% y el 30% de los discursos y que usan al menos 10 diputados. Las reglas se fijaron antes de compararla con B-Call.</li>
+    <li>B-Call con las votaciones de proyectos de ley de la Cámara del 11 de marzo al 25 de noviembre, 563 en 2022 y 1.141 en 2026, umbral 0 y un diputado de la UDI como pivote. La primera dimensión de W-NOMINATE correlaciona 0,99 en 2022 y 0,999 en 2026 con <span class="var">d1</span>.</li>
     <li>Coaliciones. En 2022, oficialismo son los partidos de Apruebo Dignidad y de Socialismo Democrático, más el PEV, y oposición, la UDI, RN, Evópoli, Republicanos, el Partido Conservador Cristiano y el PRI. La DC, el PDG y el PH quedan fuera de las dos. En 2026, oficialismo son Republicanos, la UDI, RN, Evópoli, el PNL, el PSC y Demócratas, y oposición, el FA, el PS, el PC, el PPD, la DC, el PR, el Partido Liberal, la FRVS y Acción Humanista. El PDG queda fuera. Los independientes van con el comité en que votan.</li>
-    <li>El lado de una coalición en una votación es la opción, a favor o en contra, que eligió la mayoría de sus miembros. En la Cámara gana el resultado oficial. En el Senado la API no trae el resultado y se usa el lado con más votos, que no considera los quórum especiales.</li>
-    <li>Mensajes, mociones, urgencias y leyes publicadas salen de la ficha de tramitación de cada proyecto, por fecha de ingreso o de publicación dentro de la ventana.</li>
-    <li>Discursos en la Sala de la Cámara de Labor Parlamentaria, de diputados en ejercicio y sin las intervenciones de quien preside. Se quitan nombres de personas y de partidos y las fórmulas de la Sala, y se usan las palabras que aparecen en entre el 0,1% y el 30% de los discursos y que usan al menos 10 diputados. Las palabras que distinguen a cada coalición salen de una razón de chances logarítmica con previa de Dirichlet, que toma como previa los conteos de toda la Cámara.</li>
     <li>Para la serie larga de la Cámara, ver <a href="https://alcatruz.github.io/bcall-camara-2002-2026/">Siete Cámaras en dos dimensiones</a> y <a href="https://alcatruz.github.io/boric-kast-camara/">Los dos extremos</a>. El código está en el <a href="https://github.com/Alcatruz/primeros-meses-kast-boric">repositorio</a>.</li>
   </ul>
 
@@ -234,52 +256,53 @@ footer { font-family: var(--sans); font-size: 13px; color: var(--muted); padding
   if (!D) return;
 
   function num(x, d) { return x.toLocaleString("es-CL", { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
-  function pct(x, d) { return num(100 * x, d) + "%"; }
   function fila(arr, f) { return arr.filter(f)[0]; }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
   var GOB = ["Boric", "Kast"];
-  var ETQ = { Boric: "Boric, 2022", Kast: "Kast, 2026" };
+  var MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  function fecha(iso) { var p = iso.split("-"); return +p[2] + " de " + MESES[+p[1] - 1] + " de " + p[0]; }
+  // "Apellido Apellido, Nombre" a "Nombre Apellido"
+  function persona(n) { var p = n.split(", "); return p.length < 2 ? n : p[1] + " " + p[0].split(" ")[0]; }
+  var PARTIDO = { PREP: "Republicanos", EVOP: "Evópoli", PCS: "Convergencia Social", COMUNES: "Comunes" };
+  function partido(p) { return PARTIDO[p] || p; }
+  var CLASES = [["bloque izquierda", "Izquierda en los dos períodos"], ["bloque derecha", "Derecha en los dos períodos"],
+                ["oposición", "La oposición, sea cual sea"], ["gobierno", "El gobierno, sea cual sea"]];
 
   // Tabla 1 -------------------------------------------------------------------
   (function () {
-    var corto = window.innerWidth < 600;
-    var cab = corto ? ["2023 · Boric", "2027 · Kast"] : ["Presupuesto 2023 · Boric", "Presupuesto 2027 · Kast"];
-    function ind(g, cam) { return fila(D.ind, function (r) { return r.g === g && r.cam === cam && r.ambito === "presupuesto"; }); }
-    function pr(g) { return fila(D.pres, function (r) { return r.g === g; }); }
-    var filas = [
-      ["seccion", "Cámara"],
-      ["Votaciones en la Sala", function (g) { return num(ind(g, "D").n); }],
-      ["Divididas", function (g) { return pct(ind(g, "D").div); }],
-      ["Ganadas por el oficialismo, de las divididas", function (g) { return pct(ind(g, "D").gana_of_div); }],
-      ["Votación en general, a favor y en contra", function (g) { var p = pr(g); return num(p.si) + " a " + num(p.no); }],
-      ["Diputados que cambian de bloque", function (g) { return num(pr(g).cambian_d); }],
-      ["seccion", "Senado"],
-      ["Votaciones en la Sala", function (g) { return num(ind(g, "S").n); }],
-      ["Divididas", function (g) { return pct(ind(g, "S").div); }],
-      ["Ganadas por el oficialismo, de las divididas", function (g) { return pct(ind(g, "S").gana_of_div); }]
-    ];
-    document.querySelector("#tabla-presupuesto thead").innerHTML = "<tr><th></th><th>" + cab.join("</th><th>") + "</th></tr>";
-    document.querySelector("#tabla-presupuesto tbody").innerHTML = filas.map(function (f) {
-      if (f[0] === "seccion") return '<tr class="seccion"><td colspan="3">' + f[1] + "</td></tr>";
-      return "<tr><td>" + f[0] + "</td>" + GOB.map(function (g) { return "<td>" + f[1](g) + "</td>"; }).join("") + "</tr>";
+    var cols = CLASES.map(function (c) {
+      return D.pal.filter(function (p) { return p.c === c[0]; }).sort(function (a, b) { return b.f - a.f; });
+    });
+    document.querySelector("#tabla-clases thead").innerHTML = "<tr>" + CLASES.map(function (c, i) {
+      return "<th>" + c[1] + " (" + cols[i].length + ")</th>";
+    }).join("") + "</tr>";
+    document.querySelector("#tabla-clases tbody").innerHTML = "<tr>" + cols.map(function (c) {
+      return "<td>" + c.map(function (p) { return esc(p.t); }).join(", ") + "</td>";
+    }).join("") + "</tr>";
+  })();
+
+  // Citas ---------------------------------------------------------------------
+  (function () {
+    var ROL = function (c) { return c.bloque + (((c.g === "Boric") === (c.bloque === "izquierda")) ? " en el gobierno" : " en la oposición"); };
+    var html = CLASES.map(function (cl) {
+      var cs = D.citas.filter(function (c) { return c.clase === cl[0]; });
+      if (!cs.length) return "";
+      return '<h3 class="grupo">' + cl[1] + " · " + esc(cs[0].palabra) + "</h3>" + cs.map(function (c) {
+        var re = new RegExp("(" + c.palabra.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "i");
+        return '<blockquote class="cita"><p>«…' + esc(c.texto).replace(re, "<mark>$1</mark>") + "…»</p>" +
+               '<p class="quien">' + esc(persona(c.nombre)) + " (" + esc(partido(c.partido)) + "), " + fecha(c.fecha) + " · " + ROL(c) + "</p></blockquote>";
+      }).join("");
     }).join("");
+    document.getElementById("citas").innerHTML = html;
   })();
 
   // Tabla 2 -------------------------------------------------------------------
   (function () {
-    var corto = window.innerWidth < 600;
-    var cols = [["Boric", "izquierda", "Izquierda 2022", "gobierno"], ["Kast", "izquierda", "Izquierda 2026", "oposición"],
-                ["Boric", "derecha", "Derecha 2022", "oposición"], ["Kast", "derecha", "Derecha 2026", "gobierno"]];
-    document.querySelector("#tabla-palabras thead").innerHTML = "<tr>" + cols.map(function (c) {
-      return "<th>" + c[2] + (corto ? "<br>" : " ") + "(" + c[3] + ")</th>";
-    }).join("") + "</tr>";
-    var filas = [];
-    for (var i = 1; i <= 12; i++) {
-      filas.push("<tr>" + cols.map(function (c) {
-        var p = fila(D.palabras, function (r) { return r.g === c[0] && r.lado === c[1] && r.orden === i; });
-        return "<td>" + (p ? (p.persiste ? "<b>" + p.palabra + "</b>" : p.palabra) : "") + "</td>";
-      }).join("") + "</tr>");
-    }
-    document.querySelector("#tabla-palabras tbody").innerHTML = filas.join("");
+    document.querySelector("#tabla-polos thead").innerHTML = "<tr><th></th><th>Polo negativo (PS y PC)</th><th>Polo positivo (UDI y RN)</th></tr>";
+    document.querySelector("#tabla-polos tbody").innerHTML = GOB.map(function (g) {
+      var p = fila(D.polos, function (r) { return r.g === g; });
+      return "<tr><td>" + (g === "Boric" ? "2022" : "2026") + "</td><td>" + esc(p.izquierda.replace(/_/g, " ")) + "</td><td>" + esc(p.derecha.replace(/_/g, " ")) + "</td></tr>";
+    }).join("");
   })();
 
   if (!window.Plotly) return;
@@ -288,7 +311,7 @@ footer { font-family: var(--sans); font-size: 13px; color: var(--muted); padding
     var s = getComputedStyle(document.documentElement);
     var g = function (n) { return s.getPropertyValue(n).trim(); };
     return { surface: g("--surface"), ink: g("--ink"), ink2: g("--ink-2"), muted: g("--muted"), grid: g("--grid"),
-             axis: g("--axis"), izq: g("--izq"), der: g("--der"), sen: g("--sen"), neutro: g("--neutro") };
+             axis: g("--axis"), izq: g("--izq"), der: g("--der"), sen: g("--sen"), neutro: g("--neutro"), rol: g("--rol") };
   }
   function ancho(id) { return document.getElementById(id).clientWidth; }
   function base(T, extra) {
@@ -313,21 +336,24 @@ footer { font-family: var(--sans); font-size: 13px; color: var(--muted); padding
     return { text: "<b>" + texto + "</b>", xref: "paper", yref: "paper", x: dom.x[0], y: dom.y[1], xanchor: "left", yanchor: "bottom",
              yshift: 6, showarrow: false, font: { color: T.ink, size: 13 } };
   }
-  var COLOR = function (T, g) { return g === "Boric" ? T.izq : T.der; };
+  function dosPaneles(id) {
+    var angosto = ancho(id) < 640;
+    return { angosto: angosto, dom: angosto ? [{ x: [0, 1], y: [0.57, 1] }, { x: [0, 1], y: [0, 0.43] }]
+                                            : [{ x: [0, 0.47], y: [0, 1] }, { x: [0.53, 1], y: [0, 1] }] };
+  }
+  function colorClase(T, c) {
+    return c === "bloque izquierda" ? T.izq : c === "bloque derecha" ? T.der : c === "oposición" ? T.rol : c === "gobierno" ? T.ink : T.neutro;
+  }
 
   // Figura 1 ------------------------------------------------------------------
-  // El color sigue a la coalición: en 2022 el oficialismo es la izquierda y en
-  // 2026 la derecha.
-  var ROL = { oficialismo: "Oficialismo", oposicion: "Oposición", otro: "Fuera de las coaliciones" };
+  var ROLES = { oficialismo: "Oficialismo", oposicion: "Oposición", otro: "Fuera de las coaliciones" };
   function lado(g, co) {
     if (co === "otro") return "otro";
     if (g === "Boric") return co === "oficialismo" ? "izq" : "der";
     return co === "oficialismo" ? "der" : "izq";
   }
   function figSalas(T) {
-    var angosto = ancho("fig-salas") < 640;
-    var dom = angosto ? [{ x: [0, 1], y: [0.57, 1] }, { x: [0, 1], y: [0, 0.43] }]
-                      : [{ x: [0, 0.47], y: [0, 1] }, { x: [0.53, 1], y: [0, 1] }];
+    var P2 = dosPaneles("fig-salas"), angosto = P2.angosto, dom = P2.dom;
     var GR = [["izq", "Coalición de izquierda", T.izq], ["der", "Coalición de derecha", T.der], ["otro", "Fuera de las coaliciones", T.neutro]];
     var data = [];
     GOB.forEach(function (g, i) {
@@ -338,7 +364,7 @@ footer { font-family: var(--sans); font-size: 13px; color: var(--muted); padding
           type: "scatter", mode: "markers", name: gr[1], legendgroup: gr[0], showlegend: i === 0,
           xaxis: i ? "x2" : "x", yaxis: i ? "y2" : "y",
           x: f.map(function (p) { return p.d1; }), y: f.map(function (p) { return p.d2; }),
-          customdata: f.map(function (p) { return [p.n, p.pa, ROL[p.co], num(p.d1, 2), num(p.d2, 2)]; }),
+          customdata: f.map(function (p) { return [p.n, p.pa, ROLES[p.co], num(p.d1, 2), num(p.d2, 2)]; }),
           hovertemplate: "<b>%{customdata[0]}</b> · %{customdata[1]}<br>%{customdata[2]}<br>d1 %{customdata[3]} · d2 %{customdata[4]}<extra></extra>",
           marker: { size: 8, color: gr[2], line: { color: T.surface, width: 1 } }
         });
@@ -358,73 +384,136 @@ footer { font-family: var(--sans); font-size: 13px; color: var(--muted); padding
   }
 
   // Figura 2 ------------------------------------------------------------------
-  function figDivididas(T) {
-    var CAT = [["D", "presupuesto", "Cámara, presupuesto"], ["D", "resto", "Cámara, otros proyectos"],
-               ["S", "presupuesto", "Senado, presupuesto"], ["S", "resto", "Senado, otros proyectos"]];
-    var angosto = ancho("fig-divididas") < 640;
-    var dom = angosto ? [{ x: [0, 1], y: [0.57, 1] }, { x: [0, 1], y: [0, 0.43] }]
-                      : [{ x: [0.2, 0.58], y: [0, 1] }, { x: [0.62, 1], y: [0, 1] }];
-    if (angosto) { dom[0].x = [0.36, 1]; dom[1].x = [0.36, 1]; }
-    var y = CAT.map(function (c) { return c[2]; });
+  // Rango con margen para que las etiquetas de los extremos no se corten
+  function rango(v, m) { var lo = Math.min.apply(null, v), hi = Math.max.apply(null, v), d = (hi - lo) * m; return [lo - d, hi + d]; }
+  function raiz(v) { return (v < 0 ? -1 : 1) * Math.sqrt(Math.abs(v)); }
+  function figPalabras(T) {
+    var angosto = ancho("fig-palabras") < 600;
+    var C = Math.sqrt(10.83);
     var data = [];
-    GOB.forEach(function (g) {
-      var R = CAT.map(function (c) { return fila(D.ind, function (r) { return r.g === g && r.cam === c[0] && r.ambito === c[1]; }); });
+    var resto = D.pal.filter(function (p) { return !p.c; });
+    data.push({
+      type: "scatter", mode: "markers", name: "En un solo período", x: resto.map(function (p) { return raiz(p.x); }),
+      y: resto.map(function (p) { return raiz(p.y); }),
+      customdata: resto.map(function (p) { return [p.t, num(p.x, 1), num(p.y, 1), num(p.n22), num(p.n26)]; }),
+      hovertemplate: "<b>%{customdata[0]}</b><br>G² 2022 %{customdata[1]} (%{customdata[3]} usos)<br>G² 2026 %{customdata[2]} (%{customdata[4]} usos)<extra></extra>",
+      marker: { size: 6, color: T.neutro, opacity: 0.55 }
+    });
+    CLASES.forEach(function (cl) {
+      var f = D.pal.filter(function (p) { return p.c === cl[0]; }).sort(function (a, b) { return b.f - a.f; });
+      var k = angosto ? 3 : 4;
       data.push({
-        type: "bar", orientation: "h", name: ETQ[g], legendgroup: g, y: y, x: R.map(function (r) { return 100 * r.div; }),
-        xaxis: "x", yaxis: "y", marker: { color: COLOR(T, g) },
-        customdata: R.map(function (r) { return [pct(r.div), num(r.n_div), num(r.n)]; }),
-        hovertemplate: "<b>" + ETQ[g] + "</b> · %{y}<br>Divididas %{customdata[0]}, %{customdata[1]} de %{customdata[2]}<extra></extra>"
-      });
-      data.push({
-        type: "bar", orientation: "h", name: ETQ[g], legendgroup: g, showlegend: false, y: y, x: R.map(function (r) { return 100 * r.gana_of_div; }),
-        xaxis: "x2", yaxis: "y2", marker: { color: COLOR(T, g) },
-        customdata: R.map(function (r) { return [pct(r.gana_of_div), num(r.n_div)]; }),
-        hovertemplate: "<b>" + ETQ[g] + "</b> · %{y}<br>El oficialismo ganó %{customdata[0]} de %{customdata[1]} divididas<extra></extra>"
+        type: "scatter", mode: "markers+text", name: cl[1],
+        x: f.map(function (p) { return raiz(p.x); }), y: f.map(function (p) { return raiz(p.y); }),
+        text: f.map(function (p, i) { return i < k ? p.t : ""; }),
+        // En pantallas angostas la etiqueta va hacia el centro, para que no se corte en el borde
+        textposition: f.map(function (p) { return (raiz(p.x) > 0) !== angosto ? "middle right" : "middle left"; }),
+        textfont: { color: T.ink, size: 12 },
+        customdata: f.map(function (p) { return [p.t, num(p.x, 1), num(p.y, 1), num(p.n22), num(p.n26)]; }),
+        hovertemplate: "<b>%{customdata[0]}</b><br>G² 2022 %{customdata[1]} (%{customdata[3]} usos)<br>G² 2026 %{customdata[2]} (%{customdata[4]} usos)<extra></extra>",
+        marker: { size: 9, color: colorClase(T, cl[0]), line: { color: T.surface, width: 1.5 } }
       });
     });
-    var ejeY = function (d, anchor, etiquetas) {
-      return eje(T, { domain: d.y, anchor: anchor, autorange: "reversed", showgrid: false, showticklabels: etiquetas,
-                      tickfont: { color: T.ink2, size: angosto ? 11 : 12 } });
+    var lineas = [C, -C].map(function (v) { return { type: "line", xref: "x", yref: "paper", x0: v, x1: v, y0: 0, y1: 1, line: { color: T.axis, width: 1, dash: "dot" } }; })
+      .concat([C, -C].map(function (v) { return { type: "line", xref: "paper", yref: "y", x0: 0, x1: 1, y0: v, y1: v, line: { color: T.axis, width: 1, dash: "dot" } }; }));
+    var esq = function (texto, x, y, xa, ya) {
+      return { text: texto, xref: "paper", yref: "paper", x: x, y: y, xanchor: xa, yanchor: ya, showarrow: false, font: { color: T.muted, size: 12 } };
     };
     var layout = base(T, {
-      height: angosto ? 620 : 380, barmode: "group", bargap: 0.3, bargroupgap: 0.08,
-      margin: { l: 8, r: 16, t: 64, b: 44 },
-      xaxis: eje(T, { domain: dom[0].x, anchor: "y", range: [0, 100], dtick: 25, ticksuffix: "%" }),
-      yaxis: ejeY(dom[0], "x", true),
-      xaxis2: eje(T, { domain: dom[1].x, anchor: "y2", range: [0, 100], dtick: 25, ticksuffix: "%" }),
-      yaxis2: ejeY(dom[1], "x2", angosto),
-      annotations: [titulo(T, "Votaciones divididas", dom[0]), titulo(T, "Divididas que gana el oficialismo", dom[1])],
-      legend: { orientation: "h", x: 0, xanchor: "left", y: 1 + (angosto ? 0.06 : 0.11), yanchor: "bottom", font: { color: T.ink2, size: 12 } }
+      height: angosto ? 520 : 560, margin: { l: 56, r: 16, t: angosto ? 96 : 56, b: 56 },
+      xaxis: eje(T, { title: "2022  (← derecha · izquierda →)", range: rango(D.pal.map(function (p) { return raiz(p.x); }), angosto ? 0.3 : 0.22) }),
+      yaxis: eje(T, { title: "2026  (← derecha · izquierda →)", range: rango(D.pal.map(function (p) { return raiz(p.y); }), 0.08) }),
+      shapes: lineas,
+      annotations: [esq("Izquierda en los dos", 0.99, 0.99, "right", "top"), esq("Derecha en los dos", 0.01, 0.01, "left", "bottom"),
+                    esq("Oposición en los dos", 0.01, 0.99, "left", "top"), esq("Gobierno en los dos", 0.99, 0.01, "right", "bottom")],
+      legend: { orientation: "h", x: 0, xanchor: "left", y: 1.02, yanchor: "bottom", font: { color: T.ink2, size: 12 } }
     });
-    if (angosto) layout.margin.t = 84;
-    layout.yaxis.automargin = true;
-    if (angosto) layout.yaxis2.automargin = true;
-    Plotly.react("fig-divididas", data, layout, CONFIG);
+    Plotly.react("fig-palabras", data, layout, CONFIG);
   }
 
   // Figura 3 ------------------------------------------------------------------
-  function figUrgencias(T) {
-    var MES = { "03": "marzo", "04": "abril", "05": "mayo", "06": "junio", "07": "julio", "08": "agosto", "09": "septiembre", "10": "octubre", "11": "noviembre" };
-    var CORTO = { "03": "Mar", "04": "Abr", "05": "May", "06": "Jun", "07": "Jul", "08": "Ago", "09": "Sep", "10": "Oct", "11": "Nov" };
-    var data = GOB.map(function (g) {
-      var U = D.urg.filter(function (u) { return u.g === g; });
-      return {
-        type: "scatter", mode: "lines+markers", name: ETQ[g],
-        x: U.map(function (u) { return CORTO[u.mes]; }), y: U.map(function (u) { return u.acum; }),
-        line: { color: COLOR(T, g), width: 2 }, marker: { size: 8, color: COLOR(T, g), line: { color: T.surface, width: 2 } },
-        customdata: U.map(function (u) { return [MES[u.mes], num(u.acum), num(u.n)]; }),
-        hovertemplate: "<b>" + ETQ[g] + "</b><br>Hasta fines de %{customdata[0]}, %{customdata[1]} urgencias<br>%{customdata[2]} en el mes<extra></extra>"
-      };
+  var REDES = [["Kast derecha", "Derecha 2026 · gobierno"], ["Kast izquierda", "Izquierda 2026 · oposición"],
+               ["Boric izquierda", "Izquierda 2022 · gobierno"], ["Boric derecha", "Derecha 2022 · oposición"]];
+  var redActual = REDES[0][0];
+  (function () {
+    var cont = document.getElementById("selector-red");
+    cont.innerHTML = REDES.map(function (r) {
+      return '<button type="button" data-red="' + r[0] + '" aria-pressed="' + (r[0] === redActual) + '">' + r[1] + "</button>";
+    }).join("");
+    cont.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      redActual = b.getAttribute("data-red");
+      Array.prototype.forEach.call(cont.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b); });
+      figRedes(tok());
+    });
+  })();
+  function figRedes(T) {
+    var R0 = D.redes[redActual];
+    // Solo las palabras que tienen alguna unión; las sueltas estiran el dibujo
+    var unidas = {}; R0.aristas.forEach(function (a) { unidas[a.de] = 1; unidas[a.a] = 1; });
+    var R = { aristas: R0.aristas, nodos: R0.nodos.filter(function (n) { return unidas[n.t]; }) };
+    var pos = {}; R.nodos.forEach(function (n) { pos[n.t] = n; });
+    var maxp = Math.max.apply(null, R.aristas.map(function (a) { return a.p; }));
+    var tramos = [[0, 0.15, 1], [0.15, 0.4, 2.5], [0.4, 1.01, 5]];
+    var data = tramos.map(function (tr) {
+      var xs = [], ys = [];
+      R.aristas.forEach(function (a) {
+        var q = a.p / maxp;
+        if (q >= tr[0] && q < tr[1] && pos[a.de] && pos[a.a]) { xs.push(pos[a.de].x, pos[a.a].x, null); ys.push(pos[a.de].y, pos[a.a].y, null); }
+      });
+      return { type: "scatter", mode: "lines", x: xs, y: ys, hoverinfo: "skip", showlegend: false, line: { color: T.axis, width: tr[2] } };
+    });
+    var maxn = Math.max.apply(null, R.nodos.map(function (n) { return n.n; }));
+    data.push({
+      type: "scatter", mode: "markers+text", showlegend: false,
+      x: R.nodos.map(function (n) { return n.x; }), y: R.nodos.map(function (n) { return n.y; }),
+      text: R.nodos.map(function (n) { return n.t; }), textposition: "top center", textfont: { color: T.ink, size: 12 },
+      customdata: R.nodos.map(function (n) { return [n.t, num(n.n)]; }),
+      hovertemplate: "<b>%{customdata[0]}</b><br>%{customdata[1]} usos<extra></extra>",
+      marker: { size: R.nodos.map(function (n) { return 8 + 18 * Math.sqrt(n.n / maxn); }),
+                color: R.nodos.map(function (n) { return colorClase(T, n.c); }), line: { color: T.surface, width: 1.5 } }
     });
     var layout = base(T, {
-      height: ancho("fig-urgencias") < 560 ? 380 : 400, margin: { l: 60, r: 16, t: 40, b: 44 },
-      xaxis: eje(T, { showgrid: false }),
-      yaxis: eje(T, { rangemode: "tozero", title: "Urgencias acumuladas", separatethousands: true })
+      height: ancho("fig-redes") < 600 ? 520 : 560, margin: { l: 16, r: 16, t: 16, b: 16 },
+      xaxis: { visible: false, fixedrange: true }, yaxis: { visible: false, fixedrange: true }
     });
-    Plotly.react("fig-urgencias", data, layout, CONFIG);
+    Plotly.react("fig-redes", data, layout, CONFIG);
   }
 
-  function todo() { var T = tok(); figSalas(T); figDivididas(T); figUrgencias(T); }
+  // Figura 4 ------------------------------------------------------------------
+  function figTexto(T) {
+    var P2 = dosPaneles("fig-texto"), angosto = P2.angosto, dom = P2.dom;
+    var GR = [["izquierda", "Coalición de izquierda", T.izq], ["derecha", "Coalición de derecha", T.der], ["otro", "Fuera de las coaliciones", T.neutro]];
+    var data = [];
+    GOB.forEach(function (g, i) {
+      var O = D.oradores.filter(function (o) { return o.g === g; });
+      GR.forEach(function (gr) {
+        var f = O.filter(function (o) { return o.l === gr[0]; });
+        data.push({
+          type: "scatter", mode: "markers", name: gr[1], legendgroup: gr[0], showlegend: i === 0,
+          xaxis: i ? "x2" : "x", yaxis: i ? "y2" : "y",
+          x: f.map(function (o) { return o.d1; }), y: f.map(function (o) { return o.t1; }),
+          customdata: f.map(function (o) { return [o.n, o.pa, num(o.d1, 2), num(o.t1, 2), num(o.disc)]; }),
+          hovertemplate: "<b>%{customdata[0]}</b> · %{customdata[1]}<br>d1 %{customdata[2]} · texto %{customdata[3]}<br>%{customdata[4]} intervenciones<extra></extra>",
+          marker: { size: 8, color: gr[2], line: { color: T.surface, width: 1 } }
+        });
+      });
+    });
+    var r = function (g) { return num(fila(D.corr, function (c) { return c.g === g && c.grupo === "toda la Cámara"; }).r, 2); };
+    var ex = { title: "d1, voto  (izquierda ←   → derecha)" }, ey = { title: "Posición desde el texto" };
+    var layout = base(T, {
+      height: angosto ? 800 : 440, margin: { l: 52, r: 12, t: angosto ? 120 : 64, b: 52 },
+      xaxis: eje(T, Object.assign({ domain: dom[0].x, anchor: "y" }, ex)),
+      yaxis: eje(T, Object.assign({ domain: dom[0].y, anchor: "x" }, ey)),
+      xaxis2: eje(T, Object.assign({ domain: dom[1].x, anchor: "y2" }, ex)),
+      yaxis2: eje(T, Object.assign({ domain: dom[1].y, anchor: "x2" }, angosto ? ey : {})),
+      annotations: [titulo(T, "2022 · correlación " + r("Boric"), dom[0]), titulo(T, "2026 · correlación " + r("Kast"), dom[1])],
+      legend: { orientation: "h", x: 0, xanchor: "left", y: 1 + (angosto ? 0.06 : 0.1), yanchor: "bottom", font: { color: T.ink2, size: 12 } }
+    });
+    Plotly.react("fig-texto", data, layout, CONFIG);
+  }
+
+  function todo() { var T = tok(); figSalas(T); figPalabras(T); figRedes(T); figTexto(T); }
   todo();
   if (window.matchMedia) {
     var mq = window.matchMedia("(prefers-color-scheme: dark)");
