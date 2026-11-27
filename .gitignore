@@ -1,0 +1,7 @@
+_*
+.Rhistory
+.RData
+datos/*.csv
+*.json
+*.rds
+*.parquet
