@@ -2,6 +2,8 @@
 
 Qué se dijo en la Sala de la Cámara de Diputados de Chile en los primeros meses de Boric (2022) y de Kast (2026), y cómo se relaciona con la manera en que votó cada diputado. Keyness, redes de coocurrencia, concordancias y una posición desde el texto, comparada con la posición B-Call.
 
+**📖 [Leer el análisis →](https://alcatruz.github.io/primeros-meses-kast-boric/)**
+
 El post está en `index.html` y se publica con GitHub Pages.
 
 ## Contenido
